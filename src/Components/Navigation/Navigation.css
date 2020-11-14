@@ -40,15 +40,15 @@
     transition: all 1.20s ease-in-out;
 }
 .nav-route:hover{
-    color: #f9ad3a;
+    color: #ff9900;
     transform: scale(1.1); 
 }
 
 .nav-links-container{
     width:45%;
     position: absolute;
-    right:10px;
     display: flex;
+    height: 30vh;
     justify-content: space-around;
 }
 .logo-container{
@@ -57,7 +57,7 @@
     align-items: center;
     position: relative;
     bottom:-55%;
-    
+
 }
 .logo{
     height:100%;
@@ -67,7 +67,7 @@
 }
 .logo:hover{
     color: #ffbf5e;
-    transform: scale(1.05); 
+    transform: scale(1.1); 
 }
 .MuiSwitch-colorSecondary.Mui-checked {
     color: #f9813a !important;
@@ -78,6 +78,7 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-inline-start:30px;
 }
 @media only screen and (max-width: 600px) {
     .navigation-row{
