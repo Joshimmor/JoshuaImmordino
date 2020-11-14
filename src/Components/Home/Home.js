@@ -1,6 +1,6 @@
-import React,  { useLayoutEffect, useRef }  from 'react'
+import React  from 'react'
 import './Home.css';
-import EmailForm from "./Form/EmailForm.js"
+//import EmailForm from "./Form/EmailForm.js"
 import { useSpring, animated} from "react-spring";
 import ball from "../../assets/ball.svg"
 import rings from "../../assets/rings.svg";
