@@ -1,0 +1,99 @@
+.navigation-row{
+    width: 20%;
+    height: 50vh;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    position:fixed;
+    bottom: -15%;
+    left:-5%
+    
+}
+.navigation{
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    align-items: center;
+    background: #394867;
+    box-shadow:  10px 10px 30px #303d589f, 
+             -10px -10px 30px #42537696;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-route{
+    color: #f9813a;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    scale: 1;
+    transition: all 1.20s ease-in-out;
+}
+.nav-gone{
+    display: none;
+    color: #f9813a;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    scale: 1;
+    transition: all 1.20s ease-in-out;
+}
+.nav-route:hover{
+    color: #f9ad3a;
+    transform: scale(1.1); 
+}
+
+.nav-links-container{
+    width:45%;
+    position: absolute;
+    right:10px;
+    display: flex;
+    justify-content: space-around;
+}
+.logo-container{
+    height:50px;
+    width:50px;
+    align-items: center;
+    position: relative;
+    bottom:-55%;
+    
+}
+.logo{
+    height:100%;
+    color: #394867;
+    transition: all .2s ease-in-out;
+    
+}
+.logo:hover{
+    color: #ffbf5e;
+    transform: scale(1.05); 
+}
+.MuiSwitch-colorSecondary.Mui-checked {
+    color: #f9813a !important;
+}.MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+    background-color: #f9813a !important;
+}
+.list-item-container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+@media only screen and (max-width: 600px) {
+    .navigation-row{
+        width: 20%;
+        height: 50vh;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: column;
+        position:fixed;
+        bottom: -15%;
+        left: 0
+        
+    }
+    .nav-links-container{
+        bottom: 40%;
+        left:20%;
+        height:50%
+    }
+   }
