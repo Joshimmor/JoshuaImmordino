@@ -6,7 +6,8 @@
     flex-direction: column;
     position:fixed;
     bottom: -15%;
-    left:-5%
+    left:-5%;
+    z-index: 10;
     
 }
 .navigation{
@@ -16,8 +17,7 @@
     border-radius: 5px;
     align-items: center;
     background: #394867;
-    box-shadow:  10px 10px 30px #303d589f, 
-             -10px -10px 30px #42537696;
+    border-radius: 50px;
 }
 .nav-links{
     list-style: none;

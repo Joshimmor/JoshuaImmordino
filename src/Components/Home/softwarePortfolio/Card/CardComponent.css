@@ -1,0 +1,19 @@
+.darkCard{
+    background-color: #1a1c20 !important;
+    color: #f9813a !important;
+    transition: all 1s;
+}
+.darkCard:hover{
+    transform: scale(1.05);
+    box-shadow:  10px 10px 30px #16181b, 
+         -10px -10px 30px #1e2025;
+}
+.lightCard{
+    opacity:.75;
+    background-color: #ffffff !important;
+}
+.lightCard:hover{
+    transform: scale(1.05);
+    box-shadow:  10px 10px 30px #d9d9d9, 
+             -10px -10px 30px #ffffff;
+}

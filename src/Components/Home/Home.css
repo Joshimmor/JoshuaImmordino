@@ -7,44 +7,48 @@
     height: 100vh;
     margin-top: 10px;
 }
-.rings{
-    position: fixed;
-    display: inline-block;
-    left:0;
-    bottom: 0;
-    height:200%;
-    transform:rotate(-60deg)
-  
-}
 .ball{
     position: fixed;
-    left:40%;
-    bottom: 55%;
-    height: 100%;
+    display: inline-block;
+    left:70%;
+    bottom: 50%;
+    height:100%;
+    transform:rotate(-45deg);
+    z-index: 5;
+  
+}
+.swipe{
+    opacity: .75;
+    display: block;
+    position: relative;
+    left:47%;
+    top: 90%;
+    width: 10%;
 }
 .graphic-design-container{
     height: 100vh;
 }
 .software-container{
     height: 100vh;
+    justify-content: center;
+    margin: 0;
 }
 @media only screen and (max-width: 600px) {
     .contact-card{
        width: 100%;
      }
-     .rings{
-        position: fixed;
-        display: inline-block;
-        left:0;
-        bottom: 0;
-        height:100%;
-        transform:rotate(-45deg)
-      
+     .swipe{
+        display: block;
+        position: relative;
+        left:35%;
+        top: 90%;
+        width: 30%;
     }
+     
     .ball{
         position: fixed;
-        height: 80rem;
-        left: -90%;
+        height: 60rem;
+        left: -30%;
         top:-43%
     }
    }

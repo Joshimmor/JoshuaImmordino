@@ -28,39 +28,39 @@ class Navigation extends React.Component {
         
     render() {
             return(
-                <div className="navigation-row">  
-                <div className="nav-links-container">
-                            <ul className="list-item-container">
-                                <li
-                                className="nav-links">
-                                    <a
-                                    href="#software"
-                                    style={this.state.drawer ?{ display: "inline-flex"}: {display :"none"}}
-                                    className="nav-route"
-                                    >Software</a>
-                                </li>
-                                <li 
-                                className="nav-links">
-                                    <a
-                                    style={this.state.drawer ?{ display: "inline-flex"}: {display :"none"}}
-                                    href="/"
-                                    className="nav-route"
-                                    >Graphic Design</a>
-                                </li>
-                                <li 
-                                className="nav-links">
-                                    <Switch onChange={this.darkFunc} />
-                                </li>
-                            </ul>
-                    </div>       
-                      
-                    <a  
-                    onClick={() => this.drawerFunc()}
-                    className="logo-container"
- >
-                        <img className="logo" src={logo} alt="logo"/>
-                    </a> 
-             </div>
+                    <div className="navigation-row">  
+                        <div className="nav-links-container">
+                                <ul className="list-item-container">
+                                    <li
+                                    className="nav-links">
+                                        <a
+                                        href="#software"
+                                        style={this.state.drawer ?{ display: "inline-flex"}: {display :"none"}}
+                                        className="nav-route"
+                                        >Software</a>
+                                    </li>
+                                    <li 
+                                    className="nav-links">
+                                        <a
+                                        style={this.state.drawer ?{ display: "inline-flex"}: {display :"none"}}
+                                        href="/"
+                                        className="nav-route"
+                                        >Graphic Design</a>
+                                    </li>
+                                    <li 
+                                    className="nav-links">
+                                        <Switch onChange={this.darkFunc} />
+                                    </li>
+                                </ul>
+                        </div>       
+                        
+                        <a  
+                        onClick={() => this.drawerFunc()}
+                        className="logo-container"
+    >
+                            <img className="logo" src={logo} alt="logo"/>
+                        </a> 
+                 </div>
       );
     }
   }
