@@ -4,16 +4,35 @@
     transition: all 1s;
 }
 .darkCard:hover{
-    transform: scale(1.05);
-    box-shadow:  10px 10px 30px #16181b, 
-         -10px -10px 30px #1e2025;
+    transform: scale(1.01);
+
 }
 .lightCard{
-    opacity:.75;
-    background-color: #ffffff !important;
+    background-color: #f8f0e5 !important;
+    transition: all 1s;
 }
 .lightCard:hover{
-    transform: scale(1.05);
-    box-shadow:  10px 10px 30px #d9d9d9, 
-             -10px -10px 30px #ffffff;
+    transform: scale(1.01);
+}
+.MuiCardMedia-media {
+    width: 30% !important;
+    display: inline !important
+  
+}
+.MuiPaper-root{
+    color: #F9813A !important;
+    
+}
+.MuiButton-root{
+    color: #f8f0e5!important;
+    background-color: #F9813A !important;
+    padding:5px
+}
+@media only screen and (max-width: 600px) {
+    .MuiCardMedia-media {
+        width: 40% !important;
+    }
+    .script{
+        display: none
+    }
 }

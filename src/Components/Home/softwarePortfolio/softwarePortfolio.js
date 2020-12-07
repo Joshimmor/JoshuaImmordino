@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import CardComponent from "./Card/CardComponent";
 import "./softwarePortfolio.css";
+import BackButton from "../backbutton/BackButton"
+import {Link} from "react-router-dom";
+import Planet from "../Planet/Planet";
+import Manga from "../../../assets/mangamanager.png";
+import lacutlura from "../../../assets/lacultura.png";
+import nucamp from "../../../assets/nucamp.png";
 
 export default class softwarePortfolio extends Component {
     constructor(props){
@@ -10,19 +16,22 @@ export default class softwarePortfolio extends Component {
             work:[
                 {
                     title:"Manga Manager",
-                    description:"Manages your manga"
+                    description:"React PWA that renders view on the fly from an Axios API fetch",
+                    media: Manga,
+                    views:"https://mangamanager.netlify.app/"
+
                 },
                 {
-                    title:"Manga Manager",
-                    description:"Manages your manga"
+                    title:"La Cultura",
+                    description:"Fitness Based Shopify site with a Wordpress blog attached",
+                    media: lacutlura,
+                    views:"https://dribbble.com/shots/14077907-Lacultura-E-Commerce"
                 },
                 {
-                    title:"Manga Manager",
-                    description:"Manages your manga"
-                },
-                {
-                    title:"Manga Manager",
-                    description:"Manages your manga"
+                    title:"NuCamp",
+                    description:"React PWA that runs with an Restful Server backend",
+                    media: nucamp,
+                    views: null
                 }
             ]
         }
@@ -30,15 +39,20 @@ export default class softwarePortfolio extends Component {
     render() {
         return (
          <div className="software-background">
-         <Grid spacing={2} container justify="center">
+             <Link to="/" >
+            <BackButton/>
+        </Link>  
+        
+         <Grid spacing={2}   container justify="center">
             {this.state.work.map((n,index) => {
                 return (
-                <Grid key={index + 1} item md={6}>
-                  <CardComponent darkMode={this.props.darkMode} title={n.title} description={n.description}/>
+                <Grid key={index + 1} item md={4}>
+                  <CardComponent className={this.props.show} software={true} views={n.views} darkMode={this.props.darkMode} title={n.title}  media={n.media} description={n.description}/>
                 </Grid>
                 )
             })}
-        </Grid>       
+        </Grid>  
+       
         </div>
         )
     }

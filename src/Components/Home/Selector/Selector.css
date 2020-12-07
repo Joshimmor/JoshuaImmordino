@@ -1,0 +1,42 @@
+.Selector-background{
+    position: relative;
+    /*background-color:  #f9813a;*/
+    z-index: 10;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    align-items:center;
+}
+.Selector-button{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+  
+.Selector-text{
+    text-decoration: none;
+    color: #f9813a;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    width: auto;
+}
+.MuiCardContent-root{
+    justify-content: center;
+}
+.MuiCardHeader-root{
+    justify-content: center;
+    padding:0 !important
+}
+.Selector{
+    height: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .Selector-button{
+        position: relative;
+        top:89%;
+        left:65%;
+        transform: translate(-50%,-50%);
+    }
+}

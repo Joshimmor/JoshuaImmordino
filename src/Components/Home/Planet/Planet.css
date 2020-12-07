@@ -1,0 +1,11 @@
+.Planet{
+    position: relative;
+    z-index: -5;
+}
+@media only screen and (max-width: 600px) {
+    .Planet{
+        transform: rotate(75deg) scale(1.5);
+        position: relative;
+        bottom:-15%
+    }
+}

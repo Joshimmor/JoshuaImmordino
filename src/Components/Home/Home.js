@@ -1,75 +1,61 @@
-import {React, useEffect, useState } from 'react'
+import React  from 'react'
 import './Home.css';
 //import EmailForm from "./Form/EmailForm.js"
-import { useSpring, animated, interpolate} from "react-spring";
+import { useSpring, animated} from "react-spring";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import ball from "../../assets/bglogo.svg";
-import swipe from "../../assets/swipe.svg";
 import Naviagtion from "../Navigation/Navigation";
-import SoftwarePortfolio from "./softwarePortfolio/softwarePortfolio";
+import SoftwarePortfolio from "./softwarePortfolio/SoftwarePortfolio";
+import GraphicDesign from "./graphicDesign/graphicDesign";
+import Selector from "./Selector/Selector";
 
 
-function debounce(func, wait = 5, immediate = false) {
-    let timeout;
-    return function() {
-      const context = this;
-      const args = arguments;
-      const later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      const callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  }
 
 export default function Home({darkMode, darkModeFunc}) {
     const positionEntry = useSpring({
             from:
                 {
-                  opacity:0,
-                  transform:"translate3d(0,100%,0)"
+                  transform:"translate3d(0,100%,0) rotate(180deg)"
                 },
 
             to:
                 { 
-                  opacity:.75,
-                  transform:"translate3d(0,0,0) "},
-                delay:200
+                  opacity:1,
+                  transform:"translate3d(0,0,0) rotate(-45deg)"},
+                delay:1000
                      
     })
-    const [scrollY, setScrollY] = useState(0);
-    useEffect(
-        () => {
-          const handleScroll = () => setScrollY(window.scrollY);
-          window.addEventListener("scroll", debounce(handleScroll));
-          console.log(window.scrollY)
-          return () => window.removeEventListener("scroll", debounce(handleScroll));
-        },
-        [debounce]
-      );
 
-      const [{ springscrollY }, springsetScrollY] = useSpring(() => ({
-        springscrollY: 0
-      }));
-      const parallaxLevel = 8;
-      springsetScrollY({ springscrollY: scrollY });
-      const interpHeader = springscrollY.interpolate(o => window.innerWidth > 600 ? `rotate(-${o / parallaxLevel}deg) scale(${o/300})` : `rotate(-${o / parallaxLevel}deg) scale(${o/700})`);
-      
     return (
         <div>
              <div  className="home-container">
-                <animated.img style={{transform : interpHeader}} src={ball} className="ball"/>
-                <animated.img style={positionEntry} src={swipe} className="swipe"/>
-             </div>
-             <section id="software" className="software-container">
-              <SoftwarePortfolio darkMode={darkMode}/>
-             </section>
-             <section className="graphic-design-container">
-
-            </section>
-                 <Naviagtion darkMode={darkMode} darkModeFunc={darkModeFunc}/>
+               <Router>
+                 <animated.img style={positionEntry} src={ball} className="ball"/>
+                <Switch>
+                      <Route exact path="/">
+                          <section className="selector-container">
+                            <Selector darkMode={darkMode}/>
+                          </section>
+                      </Route>
+                      <Route  path="/software">
+                        <section id="software" className="software-container">
+                          <SoftwarePortfolio darkMode={darkMode} show={window.scrollY > 344 ? "show" : "noshow"}/>
+                         </section>
+                      </Route>
+                      <Route  path="/design">
+                        <section className="graphic-design-container">
+                          <GraphicDesign darkMode={darkMode} show={window.scrollY > 1104 ? "show":"noshow"}/>
+                         </section>
+                      </Route>
+                </Switch>
+                <Naviagtion darkMode={darkMode} darkModeFunc={darkModeFunc} />
+               </Router>   
+             </div> 
+                 
         </div>
        
     )

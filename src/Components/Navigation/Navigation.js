@@ -1,9 +1,10 @@
 import React from 'react';
 import './Navigation.css';
-import logo from "../../assets/logo.svg"
 import Switch from '@material-ui/core/Switch';
-//import {useSpring, animated} from "react-spring";
+import {Link} from "react-router-dom";
+import Logo from "./Logo/Logo"
 
+//import {useSpring, animated} from "react-spring";
 
 
 class Navigation extends React.Component {
@@ -33,19 +34,19 @@ class Navigation extends React.Component {
                                 <ul className="list-item-container">
                                     <li
                                     className="nav-links">
-                                        <a
-                                        href="#software"
+                                        <Link
+                                       to="/software"
                                         style={this.state.drawer ?{ display: "inline-flex"}: {display :"none"}}
                                         className="nav-route"
-                                        >Software</a>
+                                        >Software</Link>
                                     </li>
                                     <li 
                                     className="nav-links">
-                                        <a
+                                        <Link
                                         style={this.state.drawer ?{ display: "inline-flex"}: {display :"none"}}
-                                        href="/"
+                                       to="/design"
                                         className="nav-route"
-                                        >Graphic Design</a>
+                                        >Graphic Design</Link>
                                     </li>
                                     <li 
                                     className="nav-links">
@@ -58,7 +59,7 @@ class Navigation extends React.Component {
                         onClick={() => this.drawerFunc()}
                         className="logo-container"
     >
-                            <img className="logo" src={logo} alt="logo"/>
+                            <Logo/>
                         </a> 
                  </div>
       );
