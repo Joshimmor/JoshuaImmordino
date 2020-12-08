@@ -4,12 +4,11 @@ import CardComponent from "./Card/CardComponent";
 import "./softwarePortfolio.css";
 import BackButton from "../backbutton/BackButton"
 import {Link} from "react-router-dom";
-import Planet from "../Planet/Planet";
 import Manga from "../../../assets/mangamanager.png";
 import lacutlura from "../../../assets/lacultura.png";
 import nucamp from "../../../assets/nucamp.png";
 
-export default class softwarePortfolio extends Component {
+export default class SoftwarePortfolio extends Component {
     constructor(props){
         super(props)
             this.state = {
