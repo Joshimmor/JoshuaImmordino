@@ -58,7 +58,8 @@ class Navigation extends React.Component {
                         <a  
                         onClick={() => this.drawerFunc()}
                         className="logo-container"
-    >
+                        
+                         >
                             <Logo/>
                         </a> 
                  </div>
