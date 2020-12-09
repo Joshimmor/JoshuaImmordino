@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import ball from "../../assets/bglogo.svg";
 import Naviagtion from "../Navigation/Navigation";
-import SoftwarePortfolio from "../Home/softwarePortfolio/SoftwarePortfolio";
+//import SoftwarePortfolio from "../Home/softwarePortfolio/SoftwarePortfolio";
 import GraphicDesign from "./graphicDesign/graphicDesign";
 import Selector from "./Selector/Selector";
 
@@ -43,7 +43,7 @@ export default function Home({darkMode, darkModeFunc}) {
                       </Route>
                       <Route  path="/software">
                         <section id="software" className="software-container">
-                          <SoftwarePortfolio darkMode={darkMode} show={window.scrollY > 344 ? "show" : "noshow"}/>
+                         { //<SoftwarePortfolio darkMode={darkMode} show={window.scrollY > 344 ? "show" : "noshow"}/>}
                          </section>
                       </Route>
                       <Route  path="/design">
