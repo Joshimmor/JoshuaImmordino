@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import ball from "../../assets/bglogo.svg";
 import Naviagtion from "../Navigation/Navigation";
-import SoftwarePortfolio from "../Home/softwarePortfolio/SoftwarePortfolio.js";
+import SoftwarePortfolio from "../Components/Home/softwarePortfolio/SoftwarePortfolio.js";
 import GraphicDesign from "./graphicDesign/graphicDesign";
 import Selector from "./Selector/Selector";
 
