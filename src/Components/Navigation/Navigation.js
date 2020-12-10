@@ -55,13 +55,14 @@ class Navigation extends React.Component {
                                 </ul>
                         </div>       
                         
-                        <a  
-                        onClick={() => this.drawerFunc()}
-                        className="logo-container"
-                        
-                         >
-                            <Logo/>
-                        </a> 
+                        <div  onClick={() => this.drawerFunc()}
+                        className="logo-container">
+                        <Logo 
+                            onClick={() => this.drawerFunc()}
+                           />
+                        </div>
+                            
+        
                  </div>
       );
     }
