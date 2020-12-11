@@ -2,7 +2,7 @@
   text-align: center;
   margin: 0;
   padding:0;
-  background-color: #1a1c20;
+  background: linear-gradient(36deg, rgba(26,28,32,1) 46%, rgba(43,55,78,1) 100%);
   overflow: hidden;
 }
 
@@ -10,6 +10,6 @@
   text-align: center;
   margin: 0;
   padding:0;
-  background-color: #f8f0e5;
+  background: linear-gradient(36deg, rgba(248,240,229,1) 46%, rgba(252,248,242,1) 100%);
   overflow: hidden;
 }

@@ -19,11 +19,13 @@ export default function Home({darkMode, darkModeFunc}) {
     const positionEntry = useSpring({
             from:
                 {
-                  transform:"translate3d(0,100%,0) rotate(180deg)"
+                  transform:"translate3d(0,100%,0) rotate(180deg)",
+                
                 },
 
             to:
                 { 
+                  
                   opacity:1,
                   transform:"translate3d(0,0,0) rotate(-45deg)"},
                 delay:1000

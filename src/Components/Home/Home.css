@@ -10,11 +10,12 @@
 .ball{
     position: fixed;
     display: inline-block;
-    left:70%;
-    bottom: 50%;
-    height:100%;
+    left:50%;
+    bottom: 40%;
+    height:150%;
     transform:rotate(-45deg);
     z-index: 0;
+   
   
 }
 .selector-container{
@@ -52,8 +53,8 @@
      
     .ball{
         position: fixed;
-        height: 60rem;
+        height: 100%;
         left: -30%;
-        top:-43%
+        top:-50%
     }
    }
