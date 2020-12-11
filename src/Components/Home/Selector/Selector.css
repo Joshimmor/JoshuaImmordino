@@ -35,7 +35,7 @@
 @media only screen and (max-width: 600px) {
     .Selector-button{
         position: relative;
-        bottom:0%;
+        bottom:10%;
         left:65%;
         transform: translate(-50%,-50%);
     }
